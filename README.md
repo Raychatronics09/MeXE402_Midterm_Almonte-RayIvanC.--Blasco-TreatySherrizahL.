@@ -61,33 +61,39 @@ The data set includes information about:
 
 **This code cell is for importing ‘Pandas’ and creating a dataset for analysis.**
 
+![image](https://github.com/user-attachments/assets/eb0674f4-5950-4817-a14c-b580f8de85f0)
 
 + import pandas as pd: This line imports the Pandas library, which is a powerful tool for data manipulation and analysis in Python.
 + dataset = pd.read_csv('Life_Expectancy.csv'): This line reads a CSV file named "Life_Expectancy.csv" and stores it in a variable called dataset. The ‘pd.read_csv()’ function from Pandas is used for this.
 
  
-dataset.columns: This code is simply the existing columns within the dataset.
+**This code is simply the existing columns within the dataset.**
+![image](https://github.com/user-attachments/assets/6b8ef250-8273-49c1-90a1-0fcda426bc61)
 
-**This code is used to identify and count missing (blank) values within each column of a Pandas Data Frame named dataset.**
- 
+
+**This code is used to identify and count missing (blank) values within each column of the dataset.**
+![image](https://github.com/user-attachments/assets/95def765-783d-47a3-862d-c05849a0a79e)
+
 + missing_data = dataset.isna(): This line creates a new Data Frame (missing_data) that indicates which cells in the original dataset are missing values.
 + missing_count = missing_data.sum(): This line counts the number of missing values in each column of the dataset.
 + missing_count: This line shows the number of missing values in each column.
 
-**This code fills in missing values (blank cells) within the 'Adult Mortality' column of a Pandas Data Frame named dataset.**
- 
-dataset['Adult Mortality'] = dataset['Adult Mortality'].fillna(dataset['Adult Mortality'].mean()): 
-•	dataset['Adult Mortality']: This part selects the 'Adult Mortality' column from the dataset Data Frame.
-•	.fillna(): This method is used to fill in missing values.
-•	dataset['Adult Mortality'].mean(): This calculates the mean (average) value of the 'Adult Mortality' column, excluding any missing values.
+**This code fills in missing values (blank cells) within the dataset's existing columns.**
+![image](https://github.com/user-attachments/assets/0c106e1c-4329-4566-b393-b648e9cf9500)
+
+dataset[''] = dataset[''].fillna(dataset[''].mean()): 
++ dataset['']: This part selects the column from the dataset.
++ .fillna(): This method is used to fill in missing values.
++ dataset[''].mean(): This calculates the mean (average) value of the column, excluding any missing values.
 
 
 **The code dataset.head(5) is used to display the first 5 rows of a Pandas Data Frame named dataset.**
- 
-dataset.head(5): This refers to the dataset containing the data that shows the first 5 rows of the dataset.
+![image](https://github.com/user-attachments/assets/f36dd3bf-ef9f-4d32-a4dc-cb343ea16b80)
+
 
 **This code imports the NumPy library and sets print options for better formatting of numerical output.**
- 
+ ![image](https://github.com/user-attachments/assets/576c569c-a348-4e7c-93a4-0cfa067ec4ae)
+
 + import numpy as np: This line imports the NumPy library, which is a powerful tool for numerical computations in Python.
 + np.set_printoptions(precision=0, suppress=True, formatter={'all': '{:..ef}'.format()}): This line sets specific printing options for NumPy arrays:
   + precision=0: Sets decimal places to 0 for floating-point numbers. 
@@ -96,16 +102,22 @@ dataset.head(5): This refers to the dataset containing the data that shows the f
  
 
 **This code extracts a specific subset of columns from a Pandas Data Frame named dataset and converts the resulting data into a NumPy array.**
+
+![image](https://github.com/user-attachments/assets/932291cb-d3d9-409f-bb94-685271081b57)
  
 dataset.iloc[:, 3:-1]: This part selects a specific range of columns from the dataset Data Frame. ‘:’ indicates selecting all rows. ‘3:-1’ specifies the column range starting from the 4th column and excluding the last column
 
 **This code extracts the last column from a Pandas Data Frame named dataset and converts it into a NumPy array.**
- 
+
+![image](https://github.com/user-attachments/assets/cd0b163d-58b0-4e8f-92b0-26dca0eb175a)
+
 dataset.iloc[:, -1]: This part selects the last column from the dataset Data Frame. ‘iloc[:, -1]’ means selecting all rows and the last column.
 
 
 **This code splits a dataset into training and testing sets for machine learning.**
- 
+
+![image](https://github.com/user-attachments/assets/dcb526bf-2a41-479f-8079-50b313d534d3)
+
 + from sklearn.model_selection import train_test_split: This line imports the ‘train_test_split’ function from the ‘sklearn.model_selection’ module. This function is used to randomly split a dataset into training and testing sets.   
 + X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0): This line splits the dataset into training and testing sets: 
   + X and y: Input data (features) and output data (target variable). 
@@ -113,41 +125,54 @@ dataset.iloc[:, -1]: This part selects the last column from the dataset Data Fra
   + random_state=0: Sets a random seed for reproducible splits.
 
 **This shows the results of a training set split in Python with variables X and y.**
+
+![image](https://github.com/user-attachments/assets/fdef5d25-63f6-4b6a-b31e-5a23fd0ed579)
  
 + X_train: This represents the training set for the input features (independent variables). 
 + y_train: This represents the training set for the target variable (dependent variable).
 
 **This shows the results of a testing set split in Python with variables X and y.**
- 
+
+ ![image](https://github.com/user-attachments/assets/c4da0af8-9e56-430d-b5ce-3f1d48a1171e)
+
 + X_test: This represents the testing set for the input features (independent variables). 
 + y_test: This represents the testing set for the target variable (dependent variable).
 
 **This code creates a linear regression model object.**
- 
+
+![image](https://github.com/user-attachments/assets/6763a7e8-dd73-47b3-8ea3-001a1997d5b7)
+
 + from sklearn.linear_model import LinearRegression: This line imports the ‘LinearRegression’ class from the ‘sklearn.linear_model’ module. This class is used to create linear regression models in Python.
 + model = LinearRegression(): This line creates an instance of the ‘LinearRegression’ class and assigns it to the variable model. This creates a new linear regression model object that you can use for training and making predictions.
 
  
 **This code trains a linear regression model on a training dataset.**
- 
+
+![image](https://github.com/user-attachments/assets/739a0ba0-9a74-45a9-9308-22c279b232aa)
+
 model.fit(X_train, y_train): This line trains the linear regression model using the training data: 
 + X_train: This is the training set for the input features (independent variables)
 + y_train: This is the training set for the target variable (dependent variable).
 
 **This code makes predictions using a trained linear regression model on a testing dataset.**
+
+![image](https://github.com/user-attachments/assets/b914445d-19fd-4438-bd13-1a652a05df09)
  
 + y_pred = model.predict(X_test): This line makes predictions on the testing set using the trained linear regression model. This method uses the model's learned parameters to calculate predicted values for the target variable based on the input features in the testing set
 + y_pred: This variable stores the predicted values generated by the model.
 
 **This code makes predictions using a trained linear regression model on a specific set of input data.**
- 
+
+ ![image](https://github.com/user-attachments/assets/1a710c33-a8fe-43eb-9f67-90f8d6bb0db8)
 
 + LE = model.predict([[214, 54, 4.52, 31.27232188, 67, 58848, 24.8, 68, 77, 4.71, 67, 0.1, 2842.938353, 112249, 1, 9.7, 0.676, 11.7]]):
   + LE is the variable that will store the predicted value and ‘model.predict()’ is a function used to make predictions using the trained model along with a list containing a single array of input values. Each value in the array represents a feature or independent variable. The model will use these values to make a prediction.
 
 
 **This code calculates the R-squared score as a performance metric for a machine-learning model.**
- 
+
+ ![image](https://github.com/user-attachments/assets/0731ad94-55cc-4edd-beda-4e700a41c2dd)
+
 +  from sklearn.metrics import r2_score:  Imports the r2_score function for calculating the R-squared score. R-squared score is a statistical measure that indicates how well a regression model fits the data ranging from 0 - 1.
 + r2 = r2_score(y_test, y_pred): This line calculates the R-squared score: 
   + r2_score: This is the function used to calculate the R-squared score.
@@ -155,6 +180,8 @@ model.fit(X_train, y_train): This line trains the linear regression model using 
   + y_pred: This is the predicted target values from the model.
 
 **The code calculates the adjusted R-squared score, which is a more accurate measure of model performance when dealing with multiple features.**
+
+ ![image](https://github.com/user-attachments/assets/cd3c6ef3-60ce-4706-aff1-c2695949d03b)
  
 + adj_r2 = 1 - (1 - r2) * (n - 1) / (n - k - 1): This line calculates the adjusted R-squared score using the formula: 
   + r2: The R-squared score.
