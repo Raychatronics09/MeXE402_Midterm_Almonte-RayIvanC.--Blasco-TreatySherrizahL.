@@ -34,25 +34,6 @@ The following variables are contained in the datasheet:
 
 
 
-
-
-
-
-
-
-
-
-
-The dataset used for Logistic Regression Analysis contains customer information from a telecommunication company, including whether they have churned of not. 
-The data set includes information about:
-+ Customers who left within the last month – the column is called Churn
-+ Services that each customer has signed up for – phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies
-+ Customer account information – how long they’ve been a customer, contract, payment method, paperless billing, monthly charges, and total charges
-+ Demographic info about customers – gender, age range, and if they have partners and dependents
-
-
-
-
 ## Project Objectives
 
 # Linear Regression Analysis
@@ -204,3 +185,40 @@ model.fit(X_train, y_train): This line trains the linear regression model using 
 
 
 ## Logistic Regression Analysis
+The dataset used for Logistic Regression Analysis contains customer information from a telecommunication company, including whether they have churned of not. 
+The data set includes information about:
++ Customers who left within the last month – the column is called Churn
++ Services that each customer has signed up for – phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies
++ Customer account information – how long they’ve been a customer, contract, payment method, paperless billing, monthly charges, and total charges
++ Demographic info about customers – gender, age range, and if they have partners and dependents
+
+## Methodology
+
+**The code snippet loads the CSV file "telcoduplic.csv" into a pandas DataFrame called dataset and displays the first 5 or 10 rows for a quick overview.**
+![image](https://github.com/user-attachments/assets/2659b4c2-d72b-4d48-97ba-75649090a728)
+
++ Importing the pandas library: pandas is a powerful Python library for data manipulation and analysis. It's essential for working with datasets.
++ Reading the CSV file: The read_csv() function from pandas is used to read the CSV file named 'telcoduplic.csv' and store its contents in a DataFrame called dataset.
++ Displaying the first few rows: The head() method is used to print the first 5 rows of the DataFrame, providing a quick overview of the data's structure and content.
+
+**The code snippet extracts the input features (X) and the target variable (y) from the dataset.**
+![image](https://github.com/user-attachments/assets/04842060-498c-4cab-8d71-8099017264f2)
+
++ Importing NumPy: numpy is a fundamental Python library for numerical operations. It's used for efficient array manipulation.
++ Setting print options: This code adjusts how numbers are displayed to improve readability.
++ Extracting input features (X): 
+	+ dataset.iloc[:, 1:-1] selects all rows and columns from the second column (index 1) to the second-to-last column (excluding the last column). This creates a new array containing the input features.
+	+ .values converts the DataFrame to a NumPy array for numerical operations.
++ Extracting target variable (y): 
+	+ dataset.iloc[:, -1] selects all rows and the last column, containing the target variable.
+	+ .values converts it to a NumPy array.
+
+
+
+
+
+
+
+
+
+
