@@ -1,4 +1,4 @@
-# MeXE402_Midterm_Almonte-RayIvanC.--Blasco-TreatySherrizahL.
+![image](https://github.com/user-attachments/assets/efd9dc84-4fc4-4c34-a8ea-c7f811fd0629)![image](https://github.com/user-attachments/assets/a4b9189c-cb3b-4550-a59a-2d67bc1d2e33)![image](https://github.com/user-attachments/assets/37573a1e-c6af-42b9-9c91-25d6ae66de30)![image](https://github.com/user-attachments/assets/28c867d7-073b-49da-86a0-ddd04abe3db5)# MeXE402_Midterm_Almonte-RayIvanC.--Blasco-TreatySherrizahL.
 
 ## Introduction
 
@@ -31,7 +31,12 @@ The following variables are contained in the datasheet:
 + ***Income composition of resources*** - Human Development Index in terms of income composition of resources (index ranging from 0 to 1)
 + ***Schooling*** - Number of years of Schooling (years)
 
-
+The dataset used for Logistic Regression Analysis contains customer information from a telecommunication company, including whether they have churned of not. 
+The data set includes information about:
++ Customers who left within the last month – the column is called Churn
++ Services that each customer has signed up for – phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies
++ Customer account information – how long they’ve been a customer, contract, payment method, paperless billing, monthly charges, and total charges
++ Demographic info about customers – gender, age range, and if they have partners and dependents
 
 
 ## Project Objectives
@@ -185,12 +190,7 @@ model.fit(X_train, y_train): This line trains the linear regression model using 
 
 
 ## Logistic Regression Analysis
-The dataset used for Logistic Regression Analysis contains customer information from a telecommunication company, including whether they have churned of not. 
-The data set includes information about:
-+ Customers who left within the last month – the column is called Churn
-+ Services that each customer has signed up for – phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies
-+ Customer account information – how long they’ve been a customer, contract, payment method, paperless billing, monthly charges, and total charges
-+ Demographic info about customers – gender, age range, and if they have partners and dependents
+For Logistic Regression Analysis, the dataset used is the "Telco Churn Prediction" which is in a format of **comma-separated values.** With the given data (which are now interpreted as variables), the machine is able to assess and predict the probability of a customer churning (leaving the service) based on the inputs provided. The following section was the overall step-by-step coding process.
 
 ## Methodology
 
@@ -212,6 +212,70 @@ The data set includes information about:
 + Extracting target variable (y): 
 	+ dataset.iloc[:, -1] selects all rows and the last column, containing the target variable.
 	+ .values converts it to a NumPy array.
+
+**The code snippet splits the dataset into training and testing sets, with 20% for testing and a fixed random seed for reproducibility.**
+![image](https://github.com/user-attachments/assets/944aa7ad-4446-4dc4-adcd-eb4754a1e417)
+
++ Importing train_test_split: This function from the sklearn.model_selection module is used to divide the data into training and testing sets.
++ Splitting the data: train_test_split(X, y, test_size=0.2, random_state=0) splits the input features (X) and the target variable (y) into training and testing sets. 
+  + test_size=0.2 indicates that 20% of the data will be used for testing.
+  + random_state=0 ensures reproducibility by setting a fixed random seed for the splitting process.
++ Displaying the training and testing sets: The code prints the first few rows of the X_train, X_test, y_train, and y_test arrays to visualize the split data.
+
+**The code snippet scales the training data features to have zero mean and unit variance.**
+![image](https://github.com/user-attachments/assets/09197be7-acb6-4f2c-9ca1-22cd1b7ffd71)
+
++ Importing StandardScaler: This class from the sklearn.preprocessing module is used for standardizing features by subtracting the mean and dividing by the standard deviation.
++ Creating a StandardScaler object: sc = StandardScaler() creates an instance of the StandardScaler class.
++ Fitting and transforming the training data: X_train = sc.fit_transform(X_train) standardizes the features in the training set X_train. The fit_transform() method calculates the mean and standard deviation of the training data and applies the scaling transformation.
+
+**The code snippet creates a logistic regression model with a random state of 0 for reproducibility.**
+![image](https://github.com/user-attachments/assets/16b914a1-a6ac-4f41-aaec-ec04a2ab10df)
+
++ Importing LogisticRegression: This class from the sklearn.linear_model module is used to create a logistic regression model.
++ Creating a logistic regression model: model = LogisticRegression(random_state=0) creates an instance of the LogisticRegression class with a random state of 0. The random state ensures reproducibility by setting a fixed random seed for the model's initialization.
+
+**The code snippet trains the logistic regression model on the training data.**
+![image](https://github.com/user-attachments/assets/7f931248-8ff8-405d-a428-d82f8d76b73c)
+
++ Training the model: model.fit(X_train, y_train) trains the logistic regression model model on the training set X_train and y_train. The model learns the relationship between the input features and the target variable.
+
+**The code snippet makes predictions on the testing set using the trained logistic regression model.**
+![image](https://github.com/user-attachments/assets/e91ac424-38ca-461e-84fe-5ffcf3bcd983)
+
++ Making predictions: y_pred = model.predict(sc.transform(X_test)) uses the trained model model to predict the target variable for the testing set X_test. Before making predictions, the testing data is transformed using the same StandardScaler object sc that was used for the training data.
++ Displaying predictions: The code prints the predicted values y_pred, which are the probabilities of belonging to the positive class for each data point in the testing set.
++ Making a single prediction: model.predict(sc.transform([[0,0,0,0,21,1,0,0,0,0,0,0,0,0,0,1,2,68.65,1493.2]])) makes a prediction on a single new data point. The input data must be transformed using the same StandardScaler before being passed to the model.
+
+**The code snippet evaluates the logistic regression model's performance using a confusion matrix and accuracy score.**
+![image](https://github.com/user-attachments/assets/248fc56e-dcb3-49b4-8efc-53e80be95cea)
+
++ Confusion Matrix: 
+ + confusion_matrix(y_test, y_pred) calculates the confusion matrix, which shows the correct and incorrect predictions for each class.
+ + The resulting array shows the number of true positives, false positives, false negatives, and true negatives.
+
++ Accuracy: 
+ + accuracy_score(y_test, y_pred) calculates the accuracy of the model, which is the proportion of correct predictions.
+
+## Summary of Findings
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
