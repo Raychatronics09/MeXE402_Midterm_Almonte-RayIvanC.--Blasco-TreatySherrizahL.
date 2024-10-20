@@ -199,4 +199,8 @@ model.fit(X_train, y_train): This line trains the linear regression model using 
 + from sklearn.metrics import mean_squared_error: Imports the mean_squared_error function from the sklearn.metrics module, which is used to calculate the MSE.   
 + mse = mean_squared_error(y_test, y_pred): Calculates the MSE between the actual target values (y_test) and the predicted values (y_pred) from the model.
 
+## Summary of Findings
+
+
+
 ## Logistic Regression Analysis
