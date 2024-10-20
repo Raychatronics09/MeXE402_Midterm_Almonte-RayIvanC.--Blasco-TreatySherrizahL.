@@ -55,9 +55,11 @@ The data set includes information about:
 
 ## Project Objectives
 
-# Regression Analysis
+# Linear Regression Analysis
 
-## Linear Regression Analysis
+For **Linear Regression Analysis**, the dataset used is the "Life Expectancy (WHO)" which is in a format of **comma separated values**. With the given data (which are now interpreted as variables), the machine is able to assess and predict the Life Expectancy based on inputs that it will be given. The following section was the overall step-by-step coding process.
+
+## Methodology
 
 **This code cell is for importing ‘Pandas’ and creating a dataset for analysis.**
 
