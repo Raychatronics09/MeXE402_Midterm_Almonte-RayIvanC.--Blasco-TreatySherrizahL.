@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/efd9dc84-4fc4-4c34-a8ea-c7f811fd0629)![image](https://github.com/user-attachments/assets/a4b9189c-cb3b-4550-a59a-2d67bc1d2e33)![image](https://github.com/user-attachments/assets/37573a1e-c6af-42b9-9c91-25d6ae66de30)![image](https://github.com/user-attachments/assets/28c867d7-073b-49da-86a0-ddd04abe3db5)# MeXE402_Midterm_Almonte-RayIvanC.--Blasco-TreatySherrizahL.
+# MeXE402_Midterm_Almonte-RayIvanC.--Blasco-TreatySherrizahL.
 
 ## Introduction
 
