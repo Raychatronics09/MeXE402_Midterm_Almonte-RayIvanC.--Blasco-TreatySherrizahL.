@@ -188,5 +188,13 @@ model.fit(X_train, y_train): This line trains the linear regression model using 
   + n: The number of data points in the testing set.
   + k: The number of features in the model.
 
+**Mean Squared Error** is a common metric used to evaluate regression models. It measures the average squared difference between the predicted and actual values. Lower MSE indicates better model performance.   
+
+**This code calculates the Mean Squared Error (MSE) for a machine learning model.**
+
+![image](https://github.com/user-attachments/assets/a19b460b-a3b5-422b-aabd-9bd9972380ce)
+
++ from sklearn.metrics import mean_squared_error: Imports the mean_squared_error function from the sklearn.metrics module, which is used to calculate the MSE.   
++ mse = mean_squared_error(y_test, y_pred): Calculates the MSE between the actual target values (y_test) and the predicted values (y_pred) from the model.
 
 ## Logistic Regression Analysis
