@@ -251,11 +251,11 @@ For Logistic Regression Analysis, the dataset used is the "Telco Churn Predictio
 ![image](https://github.com/user-attachments/assets/248fc56e-dcb3-49b4-8efc-53e80be95cea)
 
 + Confusion Matrix: 
- + confusion_matrix(y_test, y_pred) calculates the confusion matrix, which shows the correct and incorrect predictions for each class.
- + The resulting array shows the number of true positives, false positives, false negatives, and true negatives.
+   + confusion_matrix(y_test, y_pred) calculates the confusion matrix, which shows the correct and incorrect predictions for each class.
+   + The resulting array shows the number of true positives, false positives, false negatives, and true negatives.
 
 + Accuracy: 
- + accuracy_score(y_test, y_pred) calculates the accuracy of the model, which is the proportion of correct predictions.
+   + accuracy_score(y_test, y_pred) calculates the accuracy of the model, which is the proportion of correct predictions.
 
 ## Summary of Findings
 
