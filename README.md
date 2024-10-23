@@ -293,7 +293,8 @@ Discussion of the continuous variables tenure, monthly charges, and total charge
 + **False Positives (FP):** 99 - The model incorrectly predicted 99 instances of class 1 as class 0.
 + **True Negatives (TN):** 196 - The model correctly predicted 196 instances of class 1.
 
-**Figure 2.14**
+**Figure 2.14: Calculating the matrix**
+
 ![image](https://github.com/user-attachments/assets/484edb80-5640-4968-a61b-5eadc2126f7d)
 
 + **Accuracy:** 81.3% of the predictions were correct overall.
