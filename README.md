@@ -257,7 +257,15 @@ For Logistic Regression Analysis, the dataset used is the "Telco Churn Predictio
    + accuracy_score(y_test, y_pred) calculates the accuracy of the model, which is the proportion of correct predictions.
 
 ## Summary of Findings
+Evaluation Metrics: Calculate Accuracy
+![image](https://github.com/user-attachments/assets/32a41f35-5de1-4ef3-bed5-16fe88cf5895)
 
+   
+
+
+
+
+## Discussion
 
 
 
