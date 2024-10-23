@@ -266,6 +266,46 @@ After conducting the procedures in the Methodology, these findings emerged while
 **Figure 1.37: Calculates the Mean Squared Error**
 ![image](https://github.com/user-attachments/assets/0ee6fd3d-cdf5-4134-8d68-817b1d86fbe2)
 
+## Discussion
+
+Based on the findings of this Linear Regression Analysis for the datasheet **Life Expectancy (WHO)**, several things need discussion which are the important independent variables that affect the dependent variable the most.
+
+The Countries with Low Life Expectancies have the following traits meaning there is a strong negative correlation:
++ High mortality rates for children and adults
++ Low Expenditures on Healthcare 
++ Prevalence of Thinness
++ Higher prevalence of diseases (HIV/Measles)
+
+Inversely, countries with high Life Expectancy have the following traits meaning there is a strong positive correlation:
++ High Expenditures on Healthcare
++ Higher Immunity prevalence against harmful and infectious diseases (Diphtheria, Polio, Hepatitis B)
++ Higher Schooling Years
++ Higher Human Development Index
+
+Other variables, such as the following, have a weak correlation to Life Expectancy:
++ Population
++ GDP
++ Alcohol Consumption
+
+This could be interpreted that countries can expect to have high Life Expectancies if Healthcare becomes a priority of the people and the government. Having high educational value and high indexes for human development (such as living conditions) results in high Life Expectancy as well. Otherwise, countries can expect to have lower Life Expectancies. The prevalence of diseases, the high mortality rates, and the disregard for healthcare are all what affect Life Expectancy negatively.
+
+The following are the interpretation results for the evaluation of the Model created.
+The R-squared value resulted in 0.8160523137311941:
++ This suggests that the model is reliable and not overly complex
++ This also means that the model is a “good fit” meaning accurate in predicting outcomes
++ This also suggests that the model can effectively capture the relationship between the independent and dependent variables.
+
+The Adjusted R-squared value resulted in 0.8102332305100368
++ This suggests that the model has a good balance between fit and complexity.
++ The slight drop from the R-squared might mean that some of the independent variables are not significant contributors to the dependent variable.
++ This means that there is room for improvement within the model but is reliable and accurate in its current state.
+
+The Mean Squared Error value resulted in 16.96948547597787:
++ This means that the model has a deviation of 4.12 years in the context of Life Expectancy.
++ This also means that the predictions may not be perfect but are not completely wrong either.
++ This may be due to the significant number of outliers which the Mean Squared Error is sensitive to.
+
+Overall, The model is accurate enough as it is and is able to accurately interpret and correlate the independent and dependent variables but there is some room for improvement. These improvements, in the context of life expectancy, may come in more additional, relevant and cruicial information that regards the Healthcare status, living conditions, and overall structure of the country for accomodating human life.
 
 ## Logistic Regression Analysis
 For Logistic Regression Analysis, the dataset used is the "Telco Churn Prediction" which is in a format of **comma-separated values.** With the given data (which are now interpreted as variables), the machine is able to assess and predict the probability of a customer churning (leaving the service) based on the inputs provided. The following section was the overall step-by-step coding process.
