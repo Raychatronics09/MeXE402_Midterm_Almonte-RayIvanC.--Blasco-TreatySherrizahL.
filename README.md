@@ -47,7 +47,7 @@ For **Linear Regression Analysis**, the dataset used is the "Life Expectancy (WH
 
 ## Methodology
 
-**This code cell is for importing ‘Pandas’ and creating a dataset for analysis.**
+**Figure 1.1: Importing ‘Pandas’ and creating a dataset for analysis.**
 
 ![image](https://github.com/user-attachments/assets/eb0674f4-5950-4817-a14c-b580f8de85f0)
 
@@ -55,18 +55,18 @@ For **Linear Regression Analysis**, the dataset used is the "Life Expectancy (WH
 + dataset = pd.read_csv('Life_Expectancy.csv'): This line reads a CSV file named "Life_Expectancy.csv" and stores it in a variable called dataset. The ‘pd.read_csv()’ function from Pandas is used for this.
 
  
-**This code is simply the existing columns within the dataset.**
+**Figure 1.2: Existing columns within the dataset.**
 ![image](https://github.com/user-attachments/assets/6b8ef250-8273-49c1-90a1-0fcda426bc61)
 
 
-**This code is used to identify and count missing (blank) values within each column of the dataset.**
+**Figure 1.3: Missing (blank) values within each column of the dataset.**
 ![image](https://github.com/user-attachments/assets/95def765-783d-47a3-862d-c05849a0a79e)
 
 + missing_data = dataset.isna(): This line creates a new Data Frame (missing_data) that indicates which cells in the original dataset are missing values.
 + missing_count = missing_data.sum(): This line counts the number of missing values in each column of the dataset.
 + missing_count: This line shows the number of missing values in each column.
 
-**This code fills in missing values (blank cells) within the dataset's existing columns.**
+**Figure 1.4: Fills in missing values (blank cells) within the dataset's existing columns.**
 ![image](https://github.com/user-attachments/assets/0c106e1c-4329-4566-b393-b648e9cf9500)
 
 dataset[''] = dataset[''].fillna(dataset[''].mean()): 
@@ -75,11 +75,11 @@ dataset[''] = dataset[''].fillna(dataset[''].mean()):
 + dataset[''].mean(): This calculates the mean (average) value of the column, excluding any missing values.
 
 
-**The code dataset.head(5) is used to display the first 5 rows of a Pandas Data Frame named dataset.**
+**Figure 1.5: Displays the first 5 rows of a Pandas Data Frame named dataset.**
 ![image](https://github.com/user-attachments/assets/f36dd3bf-ef9f-4d32-a4dc-cb343ea16b80)
 
 
-**This code imports the NumPy library and sets print options for better formatting of numerical output.**
+**Figure 1.6: Imports the NumPy library and sets print options for better formatting of numerical output.**
  ![image](https://github.com/user-attachments/assets/576c569c-a348-4e7c-93a4-0cfa067ec4ae)
 
 + import numpy as np: This line imports the NumPy library, which is a powerful tool for numerical computations in Python.
@@ -89,20 +89,20 @@ dataset[''] = dataset[''].fillna(dataset[''].mean()):
   + formatter={'all': '{:..ef}'.format()}: Specifies a custom ‘formatter’ for all elements to ensure consistent and readable output.
  
 
-**This code extracts a specific subset of columns from a Pandas Data Frame named dataset and converts the resulting data into a NumPy array.**
+**Figure 1.7: Extracts a specific subset of columns from a Pandas Data Frame named dataset and converts the resulting data into a NumPy array.**
 
 ![image](https://github.com/user-attachments/assets/932291cb-d3d9-409f-bb94-685271081b57)
  
 dataset.iloc[:, 3:-1]: This part selects a specific range of columns from the dataset Data Frame. ‘:’ indicates selecting all rows. ‘3:-1’ specifies the column range starting from the 4th column and excluding the last column
 
-**This code extracts the last column from a Pandas Data Frame named dataset and converts it into a NumPy array.**
+**Figure 1.8: Extracts the last column from a Pandas Data Frame named dataset and converts it into a NumPy array.**
 
 ![image](https://github.com/user-attachments/assets/cd0b163d-58b0-4e8f-92b0-26dca0eb175a)
 
 dataset.iloc[:, -1]: This part selects the last column from the dataset Data Frame. ‘iloc[:, -1]’ means selecting all rows and the last column.
 
 
-**This code splits a dataset into training and testing sets for machine learning.**
+**Figure 1.9: Splits a dataset into training and testing sets for machine learning.**
 
 ![image](https://github.com/user-attachments/assets/dcb526bf-2a41-479f-8079-50b313d534d3)
 
@@ -112,29 +112,28 @@ dataset.iloc[:, -1]: This part selects the last column from the dataset Data Fra
   + test_size=0.2: 20% of data for testing, 80% for training. 
   + random_state=0: Sets a random seed for reproducible splits.
 
-**This shows the results of a training set split in Python with variables X and y.**
+**Figure 1.10: hows the results of a training set split in Python with variables X and y.**
 
 ![image](https://github.com/user-attachments/assets/fdef5d25-63f6-4b6a-b31e-5a23fd0ed579)
  
 + X_train: This represents the training set for the input features (independent variables). 
 + y_train: This represents the training set for the target variable (dependent variable).
 
-**This shows the results of a testing set split in Python with variables X and y.**
+**Figure 1.11: Shows the results of a testing set split in Python with variables X and y.**
 
  ![image](https://github.com/user-attachments/assets/c4da0af8-9e56-430d-b5ce-3f1d48a1171e)
 
 + X_test: This represents the testing set for the input features (independent variables). 
 + y_test: This represents the testing set for the target variable (dependent variable).
 
-**This code creates a linear regression model object.**
+**Figure 1.12: Creates a linear regression model object.**
 
 ![image](https://github.com/user-attachments/assets/6763a7e8-dd73-47b3-8ea3-001a1997d5b7)
 
 + from sklearn.linear_model import LinearRegression: This line imports the ‘LinearRegression’ class from the ‘sklearn.linear_model’ module. This class is used to create linear regression models in Python.
 + model = LinearRegression(): This line creates an instance of the ‘LinearRegression’ class and assigns it to the variable model. This creates a new linear regression model object that you can use for training and making predictions.
 
- 
-**This code trains a linear regression model on a training dataset.**
+**Figure 1.13: Trains a linear regression model on a training dataset.**
 
 ![image](https://github.com/user-attachments/assets/739a0ba0-9a74-45a9-9308-22c279b232aa)
 
@@ -142,14 +141,14 @@ model.fit(X_train, y_train): This line trains the linear regression model using 
 + X_train: This is the training set for the input features (independent variables)
 + y_train: This is the training set for the target variable (dependent variable).
 
-**This code makes predictions using a trained linear regression model on a testing dataset.**
+**Figure 1.14: Makes predictions using a trained linear regression model on a testing dataset.**
 
 ![image](https://github.com/user-attachments/assets/b914445d-19fd-4438-bd13-1a652a05df09)
  
 + y_pred = model.predict(X_test): This line makes predictions on the testing set using the trained linear regression model. This method uses the model's learned parameters to calculate predicted values for the target variable based on the input features in the testing set
 + y_pred: This variable stores the predicted values generated by the model.
 
-**This code makes predictions using a trained linear regression model on a specific set of input data.**
+**Figure 1.15: Makes predictions using a trained linear regression model on a specific set of input data.**
 
  ![image](https://github.com/user-attachments/assets/1a710c33-a8fe-43eb-9f67-90f8d6bb0db8)
 
@@ -157,7 +156,7 @@ model.fit(X_train, y_train): This line trains the linear regression model using 
   + LE is the variable that will store the predicted value and ‘model.predict()’ is a function used to make predictions using the trained model along with a list containing a single array of input values. Each value in the array represents a feature or independent variable. The model will use these values to make a prediction.
 
 
-**This code calculates the R-squared score as a performance metric for a machine-learning model.**
+**Figure 1.16: Calculates the R-squared score as a performance metric for a machine-learning model.**
 
  ![image](https://github.com/user-attachments/assets/0731ad94-55cc-4edd-beda-4e700a41c2dd)
 
@@ -167,7 +166,7 @@ model.fit(X_train, y_train): This line trains the linear regression model using 
   + y_test: This is the actual target values from the testing set.
   + y_pred: This is the predicted target values from the model.
 
-**The code calculates the adjusted R-squared score, which is a more accurate measure of model performance when dealing with multiple features.**
+**Figure 1.17: Calculates the adjusted R-squared score, which is a more accurate measure of model performance when dealing with multiple features.**
 
  ![image](https://github.com/user-attachments/assets/cd3c6ef3-60ce-4706-aff1-c2695949d03b)
  
@@ -178,7 +177,7 @@ model.fit(X_train, y_train): This line trains the linear regression model using 
 
 **Mean Squared Error** is a common metric used to evaluate regression models. It measures the average squared difference between the predicted and actual values. Lower MSE indicates better model performance.   
 
-**This code calculates the Mean Squared Error (MSE) for a machine learning model.**
+**Figure 1.18: Calculates the Mean Squared Error (MSE) for a machine learning model.**
 
 ![image](https://github.com/user-attachments/assets/a19b460b-a3b5-422b-aabd-9bd9972380ce)
 
