@@ -40,6 +40,11 @@ The data set includes information about:
 
 
 ## Project Objectives
++ Estimating the value of a dependent variable for a given set of independent variables.
++ Understanding relationships in determining the strength and nature of the relationships between variables.
++ Developing models by creating mathematical models to represent the relationships between variables.
++ Evaluating models by assessing the goodness of fit and predictive power of the models.
+
 
 # Linear Regression Analysis
 
