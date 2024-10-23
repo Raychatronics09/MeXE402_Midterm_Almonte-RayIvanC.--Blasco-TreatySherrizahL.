@@ -281,24 +281,24 @@ Churn by Total Charges
 
 Discussion of the continuous variables tenure, monthly charges, and total charges to see how they vary by other variables.
 
-Churn vs Tenure: As we can see form the churn vs tenure plot, the customers who do not churn, they tend to stay for a longer tenure with the telecom company. 
+**Churn vs Tenure:**  As we can see form the churn vs tenure plot, the customers who do not churn, they tend to stay for a longer tenure with the telecom company. 
 
-Churn by Monthly Charges: Higher % of customers churn when the monthly charges are high.
+**Churn by Monthly Charges:**  Higher % of customers churn when the monthly charges are high.
 
-Churn by Total Charges: It seems that there is higher churn when the total charges are lower.
+**Churn by Total Charges:** It seems that there is higher churn when the total charges are lower.
 
 ### Interpreting the Values in Confusion Matrix
-+ True Positives (TP): 950 - The model correctly predicted 950 instances of class 0.
-+ False Negatives (FN): 164 - The model incorrectly predicted 164 instances of class 0 as class 1.
-+ False Positives (FP): 99 - The model incorrectly predicted 99 instances of class 1 as class 0.
-+ True Negatives (TN): 196 - The model correctly predicted 196 instances of class 1.
++ **True Positives (TP):** 950 - The model correctly predicted 950 instances of class 0.
++ **False Negatives (FN):** 164 - The model incorrectly predicted 164 instances of class 0 as class 1.
++ **False Positives (FP):** 99 - The model incorrectly predicted 99 instances of class 1 as class 0.
++ **True Negatives (TN):** 196 - The model correctly predicted 196 instances of class 1.
 
 ![image](https://github.com/user-attachments/assets/484edb80-5640-4968-a61b-5eadc2126f7d)
 
-+ Accuracy: 81.3% of the predictions were correct overall.
-+ Precision: 90.5% of the instances predicted as class 0 were actually class 0.
-+ Recall: 85.3% of the actual class 0 instances were correctly predicted.
-+ F1-score: The model achieved a balanced performance, with an F1-score of 87.8%.
++ **Accuracy:** 81.3% of the predictions were correct overall.
++ **Precision:** 90.5% of the instances predicted as class 0 were actually class 0.
++ **Recall:** 85.3% of the actual class 0 instances were correctly predicted.
++ **F1-score:** The model achieved a balanced performance, with an F1-score of 87.8%.
 
 	These metrics suggest that the model is performing reasonably well, but there is still room for improvement, especially in terms of recall. It's important to consider the specific context of the problem and the relative importance of precision and recall when evaluating the model's performance.
 
