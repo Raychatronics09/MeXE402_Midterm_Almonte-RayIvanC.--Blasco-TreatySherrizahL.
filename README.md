@@ -289,7 +289,8 @@ Other variables, such as the following, have a weak correlation to Life Expectan
 
 This could be interpreted that countries can expect to have high Life Expectancies if Healthcare becomes a priority of the people and the government. Having high educational value and high indexes for human development (such as living conditions) results in high Life Expectancy as well. Otherwise, countries can expect to have lower Life Expectancies. The prevalence of diseases, the high mortality rates, and the disregard for healthcare are all what affect Life Expectancy negatively.
 
-The following are the interpretation results for the evaluation of the Model created.
+The following are the interpretation results for the evaluation of the Model created. These are the views of the model where validation of purpose, functionality and improvement in general is shown.
+
 The R-squared value resulted in 0.8160523137311941:
 + This suggests that the model is reliable and not overly complex
 + This also means that the model is a “good fit” meaning accurate in predicting outcomes
