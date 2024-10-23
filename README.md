@@ -257,22 +257,22 @@ For Logistic Regression Analysis, the dataset used is the "Telco Churn Predictio
    + accuracy_score(y_test, y_pred) calculates the accuracy of the model, which is the proportion of correct predictions.
 
 ## Summary of Findings
-Evaluation Metrics: Calculate Accuracy
+**Figure 2.9: Evaluation Metrics: Calculate Accuracy**
 ![image](https://github.com/user-attachments/assets/bd791a6b-1680-473c-a379-b3b0a78311f3)
 
-Visualization: Plot confusion matrices
+**Figure 2.10: Visualization: Plot confusion matrices**
 
 ![image](https://github.com/user-attachments/assets/a2bb7fc0-db58-464f-861a-3820861f6582)
 
-Churn Vs Tenure
+**Figure 2.11: Churn Vs Tenure**
 
 ![image](https://github.com/user-attachments/assets/7bafdc8a-2a87-4315-bb82-3bff1cceeb8c)
 
-Churn by Monthly Charges
+**Figure 2.12: Churn by Monthly Charges**
 
 ![image](https://github.com/user-attachments/assets/1cadf791-525a-4191-ad18-7b7062d1e077)
 
-Churn by Total Charges
+**Figure 2.13: Churn by Total Charges**
 
 ![image](https://github.com/user-attachments/assets/df0ebb83-a849-4006-8ea1-a44bb138939a)
 
@@ -293,6 +293,7 @@ Discussion of the continuous variables tenure, monthly charges, and total charge
 + **False Positives (FP):** 99 - The model incorrectly predicted 99 instances of class 1 as class 0.
 + **True Negatives (TN):** 196 - The model correctly predicted 196 instances of class 1.
 
+**Figure 2.14**
 ![image](https://github.com/user-attachments/assets/484edb80-5640-4968-a61b-5eadc2126f7d)
 
 + **Accuracy:** 81.3% of the predictions were correct overall.
