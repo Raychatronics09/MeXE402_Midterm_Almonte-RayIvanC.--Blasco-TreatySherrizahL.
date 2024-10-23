@@ -48,7 +48,6 @@ For **Linear Regression Analysis**, the dataset used is the "Life Expectancy (WH
 ## Methodology
 
 **Figure 1.1: Importing ‘Pandas’ and creating a dataset for analysis.**
-
 ![image](https://github.com/user-attachments/assets/eb0674f4-5950-4817-a14c-b580f8de85f0)
 
 + import pandas as pd: This line imports the Pandas library, which is a powerful tool for data manipulation and analysis in Python.
@@ -156,36 +155,111 @@ model.fit(X_train, y_train): This line trains the linear regression model using 
   + LE is the variable that will store the predicted value and ‘model.predict()’ is a function used to make predictions using the trained model along with a list containing a single array of input values. Each value in the array represents a feature or independent variable. The model will use these values to make a prediction.
 
 
-**Figure 1.16: Calculates the R-squared score as a performance metric for a machine-learning model.**
-
- ![image](https://github.com/user-attachments/assets/0731ad94-55cc-4edd-beda-4e700a41c2dd)
-
-+  from sklearn.metrics import r2_score:  Imports the r2_score function for calculating the R-squared score. R-squared score is a statistical measure that indicates how well a regression model fits the data ranging from 0 - 1.
-+ r2 = r2_score(y_test, y_pred): This line calculates the R-squared score: 
-  + r2_score: This is the function used to calculate the R-squared score.
-  + y_test: This is the actual target values from the testing set.
-  + y_pred: This is the predicted target values from the model.
-
-**Figure 1.17: Calculates the adjusted R-squared score, which is a more accurate measure of model performance when dealing with multiple features.**
-
- ![image](https://github.com/user-attachments/assets/cd3c6ef3-60ce-4706-aff1-c2695949d03b)
- 
-+ adj_r2 = 1 - (1 - r2) * (n - 1) / (n - k - 1): This line calculates the adjusted R-squared score using the formula: 
-  + r2: The R-squared score.
-  + n: The number of data points in the testing set.
-  + k: The number of features in the model.
-
-**Mean Squared Error** is a common metric used to evaluate regression models. It measures the average squared difference between the predicted and actual values. Lower MSE indicates better model performance.   
-
-**Figure 1.18: Calculates the Mean Squared Error (MSE) for a machine learning model.**
-
-![image](https://github.com/user-attachments/assets/a19b460b-a3b5-422b-aabd-9bd9972380ce)
-
-+ from sklearn.metrics import mean_squared_error: Imports the mean_squared_error function from the sklearn.metrics module, which is used to calculate the MSE.   
-+ mse = mean_squared_error(y_test, y_pred): Calculates the MSE between the actual target values (y_test) and the predicted values (y_pred) from the model.
 
 ## Summary of Findings
 
+After conducting the procedures in the Methodology, these findings emerged while developing the model. The following are significant variables for consideration and helped in shaping the model into the way it is and how it resulted.
+
+1. **Incomplete Data**: The datasheet “Life Expectancy (WHO)” contained several missing data. By using the code from Figure 1.3, the following figure shows how many cells have no entry.
+**Figure 1.16: Number of missing values in each existing column**
+
+![image](https://github.com/user-attachments/assets/64c8adee-9190-4af5-85bb-cebe7abde6cc)
+
+
+3. **Prejudiced Variable Influence**: Noticeably in the datasheet, some trends are followed and somewhat consistent through numerous sets of data. The following figures show these trends.
+
+**Set 1.1: Scatter Plot of every variable and the outcome (Life Expectancy)**
+
+**Figure 1.17: Adult Mortality and Life Expectancy**
+![image](https://github.com/user-attachments/assets/434b1855-5413-45ef-a21c-fb5fab7355cf)
+
+
+**Figure 1.18: Infant Deaths and Life Expectancy**
+![image](https://github.com/user-attachments/assets/815a389f-264b-4cf4-9214-0e403ca6e5ff)
+
+
+**Figure 1.19: Alcohol and Life Expectancy**
+![image](https://github.com/user-attachments/assets/640b8d7f-9e76-4e24-a626-d02495e2c590)
+
+
+**Figure 1.20: Percentage Expenditure and Life Expectancy**
+![image](https://github.com/user-attachments/assets/c68f6440-2f15-4811-bd3f-7121712cf586)
+
+
+**Figure 1.21: Hepatitis B Immunity and Life Expectancy**
+![image](https://github.com/user-attachments/assets/1426d02b-e6ce-4998-a984-853b9cd7d7b3)
+
+
+**Figure 1.22: Measles Immunity and Life Expectancy**
+![image](https://github.com/user-attachments/assets/7101ec61-daa2-48f1-be2f-51e2aa178081)
+
+
+**Figure 1.23: BMI and Life Expectancy**
+![image](https://github.com/user-attachments/assets/3e251659-b9bb-4e65-84f1-9b1908eb0c2c)
+
+
+**Figure 1.24: Under-five deaths and Life Expectancy**
+![image](https://github.com/user-attachments/assets/d7a33775-ada5-43ef-b94d-4280fad8ab89)
+
+
+**Figure 1.25: Polio Immunity and Life Expectancy**
+![image](https://github.com/user-attachments/assets/3b31896d-45b9-4885-9699-a2e6567e5d3e)
+
+
+**Figure 1.26: Total Expenditure and Life Expectancy**
+![image](https://github.com/user-attachments/assets/017ea577-064d-45fb-9f24-625f5f0e1732)
+
+
+**Figure 1.27: Diphtheria Immunity and Life Expectancy**
+![image](https://github.com/user-attachments/assets/3024938d-7b65-45c9-820c-afb85c4f889c)
+
+
+**Figure 1.28: HIV/AIDS and Life Expectancy**
+![image](https://github.com/user-attachments/assets/0f438030-c709-4753-963b-466ac82940cc)
+
+
+**Figure 1.29: GDP and Life Expectancy**
+![image](https://github.com/user-attachments/assets/843442f4-f666-41c4-a8cc-82b39467354c)
+
+
+**Figure 1.30: Population and Life Expectancy**
+![image](https://github.com/user-attachments/assets/bcc98c75-65a2-4b9b-8a24-eafa4783e6bd)
+
+
+**Figure 1.31: Thinness among 10-19 years and Life Expectancy**
+![image](https://github.com/user-attachments/assets/e0e05107-869b-485f-b00e-e3d5325209d9)
+
+
+**Figure 1.32: Thinness among 5-9 years and Life Expectancy**
+![image](https://github.com/user-attachments/assets/5b372c1e-f9f3-4e31-8873-1e8d9a46f60d)
+
+
+**Figure 1.33: Income composition of resources and Life Expectancy**
+![image](https://github.com/user-attachments/assets/3ceaa178-68da-44ed-8b5c-2c8e36c618e2)
+
+
+**Figure 1.34: Schooling and Life Expectancy**
+![image](https://github.com/user-attachments/assets/d7a647bf-4299-4be9-a115-dac0d2de1574)
+
+
+3. **Model Evaluation**: After the model has been successfully made and is functioning based on the code shown in Figure 1.15, a test for evaluation is due for execution, and as such, R-squared, Adjusted R-Squared, and Mean Squared Error were used.
++ **R-squared**
+	+ R-squared measures the proportion of variance in the dependent variable that is explained by the independent variables in the model. Values range from 0 to 1. A higher R-squared indicates a better fit of the model to the data, meaning the model explains more variability in the outcome.
++ **Adjusted R-squared**
+	+ Adjusted R-squared adjusts the R-squared value based on the number of predictors in the model, penalizing for adding non-informative variables. It provides a more accurate measure of model fit, especially when comparing models with different numbers of predictors. A higher Adjusted R-squared indicates a better model that explains variability without being overly complex.
++ **Mean Squared Error**
+	+  MSE calculates the average of the squared differences between actual and predicted values, quantifying the model's prediction error. Lower MSE values indicate better predictive accuracy. It reflects how close the model's predictions are to the actual outcomes, with smaller values representing less error.
+
+**Figure 1.35: Calculates the R-squared score**
+![image](https://github.com/user-attachments/assets/b6e5a3de-d029-41ff-8f92-66ee51a2cb30)
+
+
+**Figure 1.36: Calculates the adjusted R-squared score**
+![image](https://github.com/user-attachments/assets/e00c693a-a1c9-475d-a7b8-7bcbbcb262a3)
+
+
+**Figure 1.37: Calculates the Mean Squared Error**
+![image](https://github.com/user-attachments/assets/0ee6fd3d-cdf5-4134-8d68-817b1d86fbe2)
 
 
 ## Logistic Regression Analysis
