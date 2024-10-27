@@ -1,10 +1,10 @@
 # MeXE402_Midterm_Almonte-RayIvanC.--Blasco-TreatySherrizahL.
 
-## Introduction
+## I. Introduction
 
 Every day, data is collected and stored. These data can help shape the very world we live in whether it makes the world better, makes life better, or can make life and the world more secure and especially, safer. It can also help with predicting outcomes or results whether it be about behavior or risks and that is where Machine Learning can be applied. Machine Learning is the technological advancement that allows computers to learn from data or variables it is given and execute certain tasks it is being asked to do. One of these tasks is being able to predict a certain outcome based on the data or the variables and what the results were based on those. This kind of task is called Regression Analysis wherein there are factors, called the independent variables, that lead to outcomes, called dependent variables. The dependent variable is what the machine is trying to predict based on the numerous independent variables that are factors to that outcome. For this project, there are two kinds of Regression analysis used which are the Linear Regression Analysis and the Logistic Regression analysis. Linear Regression Analysis refers to the relationship between the independent variables and their impact on the dependent variable which is classified to be in continuous nature. Logistic Regression Analysis is also known as a logit model, is a statistical analysis method to predict a binary outcome, such as yes or no, true or false and 1 or 0 based on a prior observation of a dataset. A logistic regression model predicts a dependent data variable by analyzing the relationship between one or more existing independent variables.
 
-## Dataset Description
+## II. Dataset Description
 
 The dataset used for the Linear Regression Analysis is the “Life Expectancy (WHO)” which is a Statistical Analysis of factors influencing Life Expectancy.  
 The following variables are contained in the datasheet:
