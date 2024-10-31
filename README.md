@@ -380,11 +380,11 @@ For Logistic Regression Analysis, the dataset used is the "Telco Churn Predictio
 
 ## Summary of Findings
 **Figure 2.9: The Evaluation Metrics: Calculating the accuracy**
-![image](https://github.com/user-attachments/assets/bd791a6b-1680-473c-a379-b3b0a78311f3)
+![image](https://github.com/user-attachments/assets/ef9ed1e7-8b01-4f8b-8927-f36b3c11fbe6)
 
 **Figure 2.10: The visualization of plotting the confusion matrices**
 
-![image](https://github.com/user-attachments/assets/a2bb7fc0-db58-464f-861a-3820861f6582)
+![image](https://github.com/user-attachments/assets/9a9a37c2-03b5-4da7-90e8-f8fcfda883aa)
 
 **Figure 2.11: Box Plot of Churn Vs Tenure**
 
