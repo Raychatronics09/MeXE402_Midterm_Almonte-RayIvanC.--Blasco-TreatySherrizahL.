@@ -410,10 +410,10 @@ Discussion of the continuous variables tenure, monthly charges, and total charge
 **Churn by Total Charges:** It seems that there is higher churn when the total charges are lower.
 
 ### Interpreting the Values in Confusion Matrix
-+ **True Positives (TP):** 950 - The model correctly predicted 950 instances of class 0.
-+ **False Negatives (FN):** 164 - The model incorrectly predicted 164 instances of class 0 as class 1.
-+ **False Positives (FP):** 99 - The model incorrectly predicted 99 instances of class 1 as class 0.
-+ **True Negatives (TN):** 196 - The model correctly predicted 196 instances of class 1.
++ **True Positives (TP):** 1044 - The model correctly predicted instances were correctly classified as positive.
++ **False Negatives (FN):** 1 - The model incorrectly predicted 164 instances of class 0 as class 1.
++ **False Positives (FP):** 0 - The model incorrectly predicted 99 instances of class 1 as class 0.
++ **True Negatives (TN):** 364 - The model correctly predicted 196 instances of class 1.
 
 **Figure 2.14: Calculating the matrix**
 
