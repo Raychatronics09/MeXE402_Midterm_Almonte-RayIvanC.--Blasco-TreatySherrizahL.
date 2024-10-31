@@ -321,7 +321,7 @@ For Logistic Regression Analysis, the dataset used is the "Telco Churn Predictio
 + Displaying the first few rows: The head() method is used to print the first 5 rows of the DataFrame, providing a quick overview of the data's structure and content.
 
 **Figure 2.2: The code snippet extracts the input features (X) and the target variable (y) from the dataset.**
-![image](https://github.com/user-attachments/assets/04842060-498c-4cab-8d71-8099017264f2)
+![image](https://github.com/user-attachments/assets/45f04010-2c2e-494d-94f2-168dfe94d938)
 
 + Importing NumPy: numpy is a fundamental Python library for numerical operations. It's used for efficient array manipulation.
 + Setting print options: This code adjusts how numbers are displayed to improve readability.
@@ -333,7 +333,7 @@ For Logistic Regression Analysis, the dataset used is the "Telco Churn Predictio
 	+ .values converts it to a NumPy array.
 
 **Figure 2.3: The code snippet splits the dataset into training and testing sets, with 20% for testing and a fixed random seed for reproducibility.**
-![image](https://github.com/user-attachments/assets/944aa7ad-4446-4dc4-adcd-eb4754a1e417)
+![image](https://github.com/user-attachments/assets/85cb69ed-d964-4eae-ad7f-adc150e3d4f2)
 
 + Importing train_test_split: This function from the sklearn.model_selection module is used to divide the data into training and testing sets.
 + Splitting the data: train_test_split(X, y, test_size=0.2, random_state=0) splits the input features (X) and the target variable (y) into training and testing sets. 
@@ -342,7 +342,7 @@ For Logistic Regression Analysis, the dataset used is the "Telco Churn Predictio
 + Displaying the training and testing sets: The code prints the first few rows of the X_train, X_test, y_train, and y_test arrays to visualize the split data.
 
 **Figure 2.4: The code snippet scales the training data features to have zero mean and unit variance.**
-![image](https://github.com/user-attachments/assets/09197be7-acb6-4f2c-9ca1-22cd1b7ffd71)
+![image](https://github.com/user-attachments/assets/76816450-7b04-4bee-a7d4-14dd0488d8b6)
 
 + Importing StandardScaler: This class from the sklearn.preprocessing module is used for standardizing features by subtracting the mean and dividing by the standard deviation.
 + Creating a StandardScaler object: sc = StandardScaler() creates an instance of the StandardScaler class.
@@ -360,14 +360,16 @@ For Logistic Regression Analysis, the dataset used is the "Telco Churn Predictio
 + Training the model: model.fit(X_train, y_train) trains the logistic regression model model on the training set X_train and y_train. The model learns the relationship between the input features and the target variable.
 
 **Figure 2.7: The code snippet makes predictions on the testing set using the trained logistic regression model.**
-![image](https://github.com/user-attachments/assets/e91ac424-38ca-461e-84fe-5ffcf3bcd983)
+![image](https://github.com/user-attachments/assets/5a320152-037d-49cf-9dc9-a306d92fc691)
+
 
 + Making predictions: y_pred = model.predict(sc.transform(X_test)) uses the trained model model to predict the target variable for the testing set X_test. Before making predictions, the testing data is transformed using the same StandardScaler object sc that was used for the training data.
 + Displaying predictions: The code prints the predicted values y_pred, which are the probabilities of belonging to the positive class for each data point in the testing set.
 + Making a single prediction: model.predict(sc.transform([[0,0,0,0,21,1,0,0,0,0,0,0,0,0,0,1,2,68.65,1493.2]])) makes a prediction on a single new data point. The input data must be transformed using the same StandardScaler before being passed to the model.
 
 **Figure 2.8: The code snippet evaluates the logistic regression model's performance using a confusion matrix and accuracy score.**
-![image](https://github.com/user-attachments/assets/248fc56e-dcb3-49b4-8efc-53e80be95cea)
+![image](https://github.com/user-attachments/assets/8642f755-af9e-43a2-bbc5-25227f490179)
+
 
 + Confusion Matrix: 
    + confusion_matrix(y_test, y_pred) calculates the confusion matrix, which shows the correct and incorrect predictions for each class.
