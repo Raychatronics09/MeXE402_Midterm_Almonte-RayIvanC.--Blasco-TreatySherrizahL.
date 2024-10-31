@@ -398,8 +398,24 @@ For Logistic Regression Analysis, the dataset used is the "Telco Churn Predictio
 
 ![image](https://github.com/user-attachments/assets/df0ebb83-a849-4006-8ea1-a44bb138939a)
 
+**Figure 2.14: Calculating the matrix**
+![image](https://github.com/user-attachments/assets/94ab257f-f92c-4df7-a04b-1e2ddb8e42b3)
++ **Accuracy:** 99.93% of the predictions were correct overall.
++ **Precision:** 99.72% of the instances predicted as class 0 were actually class 0.
++ **Recall:** 1% of the actual class 0 instances were correctly predicted.
++ **F1-score:** The model achieved a balanced performance, with an F1-score of 99.86%.
+
+
+
+
 
 ## Discussion
+
+### Interpreting the Values in Confusion Matrix
++ **True Positives (TP):** 1044 - The model correctly predicted 1044 instances as belonging to class 0.
++ **False Negatives (FN):** 1 - The model incorrectly predicted 1 instance as belonging to class 1 when it actually belonged to class 0.
++ **False Positives (FP):** 0 - The model did not incorrectly predict any instances as belonging to class 0 when they actually belonged to class 1.
++ **True Negatives (TN):** 364 - The model correctly predicted 364 instances as belonging to class 1.
 
 Discussion of the continuous variables tenure, monthly charges, and total charges to see how they vary by other variables.
 
@@ -410,22 +426,12 @@ Discussion of the continuous variables tenure, monthly charges, and total charge
 **Churn by Total Charges:** It seems that there is higher churn when the total charges are lower.
 + Therefore,  monthly charges, tenure and total charges are the most important predictor variables to predict churn.
 
-### Interpreting the Values in Confusion Matrix
-+ **True Positives (TP):** 1044 - The model correctly predicted 1044 instances as belonging to class 0.
-+ **False Negatives (FN):** 1 - The model incorrectly predicted 1 instance as belonging to class 1 when it actually belonged to class 0.
-+ **False Positives (FP):** 0 - The model did not incorrectly predict any instances as belonging to class 0 when they actually belonged to class 1.
-+ **True Negatives (TN):** 364 - The model correctly predicted 364 instances as belonging to class 1.
 
-**Figure 2.14: Calculating the matrix**
-
-![image](https://github.com/user-attachments/assets/94ab257f-f92c-4df7-a04b-1e2ddb8e42b3)
-
-+ **Accuracy:** 99.93% of the predictions were correct overall.
-+ **Precision:** 99.72% of the instances predicted as class 0 were actually class 0.
-+ **Recall:** 1% of the actual class 0 instances were correctly predicted.
-+ **F1-score:** The model achieved a balanced performance, with an F1-score of 99.86%.
-
-	These metrics suggest that the model is performing reasonably well, but there is still room for improvement, especially in terms of recall. It's important to consider the specific context of the problem and the relative importance of precision and recall when evaluating the model's performance.
+Insights:
++ Logistic regression was selected for its interpretability and effectiveness in binary classification problems like churn prediction.
++ Feature importance can often reveal which factors contribute most significantly to churn. For instance, longer tenure could significantly impact the probability of churn.
++ In certain features, like monthly charges and total charges, were shown to have a stronger influence on the prediction, the business can explore targeted interventions based on these factors to reduce churn.
++ Overall, the model’s outputs support data-driven decisions, allowing the business to focus resources on high-risk customers and enhance retention through targeted initiatives.
 
 
 
