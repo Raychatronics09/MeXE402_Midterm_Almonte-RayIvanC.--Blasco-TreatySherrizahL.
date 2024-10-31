@@ -365,7 +365,7 @@ For Logistic Regression Analysis, the dataset used is the "Telco Churn Predictio
 
 + Making predictions: y_pred = model.predict(sc.transform(X_test)) uses the trained model model to predict the target variable for the testing set X_test. Before making predictions, the testing data is transformed using the same StandardScaler object sc that was used for the training data.
 + Displaying predictions: The code prints the predicted values y_pred, which are the probabilities of belonging to the positive class for each data point in the testing set.
-+ Making a single prediction: model.predict(sc.transform([[0,0,0,0,21,1,0,0,0,0,0,0,0,0,0,1,2,68.65,1493.2]])) makes a prediction on a single new data point. The input data must be transformed using the same StandardScaler before being passed to the model.
++ Making a single prediction: makes a prediction on a single new data point. The input data must be transformed using the same StandardScaler before being passed to the model.
 
 **Figure 2.8: The code snippet evaluates the logistic regression model's performance using a confusion matrix and accuracy score.**
 ![image](https://github.com/user-attachments/assets/8642f755-af9e-43a2-bbc5-25227f490179)
@@ -408,12 +408,13 @@ Discussion of the continuous variables tenure, monthly charges, and total charge
 **Churn by Monthly Charges:**  Higher % of customers churn when the monthly charges are high.
 
 **Churn by Total Charges:** It seems that there is higher churn when the total charges are lower.
++ Therefore,  monthly charges, tenure and total charges are the most important predictor variables to predict churn.
 
 ### Interpreting the Values in Confusion Matrix
-+ **True Positives (TP):** 1044 - The model correctly predicted instances were correctly classified as positive.
-+ **False Negatives (FN):** 1 - The model incorrectly predicted 164 instances of class 0 as class 1.
-+ **False Positives (FP):** 0 - The model incorrectly predicted 99 instances of class 1 as class 0.
-+ **True Negatives (TN):** 364 - The model correctly predicted 196 instances of class 1.
++ **True Positives (TP):** 1044 - The model correctly predicted 1044 instances as belonging to class 0.
++ **False Negatives (FN):** 1 - The model incorrectly predicted 1 instance as belonging to class 1 when it actually belonged to class 0.
++ **False Positives (FP):** 0 - The model did not incorrectly predict any instances as belonging to class 0 when they actually belonged to class 1.
++ **True Negatives (TN):** 364 - The model correctly predicted 364 instances as belonging to class 1.
 
 **Figure 2.14: Calculating the matrix**
 
