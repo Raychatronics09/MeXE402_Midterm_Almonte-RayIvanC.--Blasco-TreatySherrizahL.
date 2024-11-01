@@ -446,23 +446,31 @@ Insights:
 
 ### **Purpose:**
 
-+ **Linear Regression:** Predicts a continuous outcome.
++ **Linear Regression:** Predicts a continuous outcome, which in this case is the LIfe Expectancy in years.
 + **Logistic Regression:** Predicts a binary outcome (e.g., yes/no).
 
 ### **Output:**
 
-+ **Linear Regression:** Gives a continuous value.
++ **Linear Regression:** Gives a continuous value meaning it is any number or integer whose limitations depend on the range of expected output.
 + **Logistic Regression:** Provides a probability to classify an observation.
 
 ### **Applications:**
 
-+ **Linear Regression:** Ideal for forecasting and trends.
++ **Linear Regression:** Ideal for forecasting and trends such as what the Life Expectancy Model was for.
 + **Logistic Regression:** Best for classification tasks, like churn prediction.
 
 ## **Limitations**
 
-+ **Linear Regression:** Sensitive to outliers, assumes a linear relationship, and struggles with multicollinearity.
-+ **Logistic Regression:** Limited to binary (or complex multi-class) outcomes, assumes linearity in log-odds, and needs a larger, balanced dataset.
+### **Linear Regression** 
++ Sensitive to outliers: As shown in the Linear Regression Model, Visualization and Scatter plots of each independent vs dependent variable, there are numerous outliers and therefore impacts the general accuracy of interpretation capabilities of the model
++ Assumes a linear relationship: Since the model always assumes a linear relationship, it always looks for a trend with a linear manner but in real world applications, that is not always the case. 
++ Struggles with multicollinearity: The model faces difficulty in determining the more significant coefficient. From the data, underfive deaths and infant deaths are the main example of this limitation.
+
+
+### **Logistic Regression** 
++ Limited to binary (or complex multi-class) outcomes 
++ Assumes linearity in log-odds 
++ Needs a larger, balanced dataset
 
 
 
