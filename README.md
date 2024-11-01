@@ -468,9 +468,9 @@ Insights:
 
 
 ### **Logistic Regression** 
-+ Limited to binary (or complex multi-class) outcomes 
-+ Assumes linearity in log-odds 
-+ Needs a larger, balanced dataset
++ Limited to binary (or complex multi-class) outcomes: Logistic regression is well-suited to the binary "churn" vs. "no churn" outcome in the Telco dataset, predicting each customer’s likelihood of churning. However, it doesn’t reveal why customers churn, which requires further analysis.
++ Assumes linearity in log-odds: Logistic regression assumes a linear relationship between features and the log-odds of churn. If relationships (e.g., between tenure and churn) are non-linear, logistic regression might not fully capture them, potentially reducing accuracy.
++ Imbalanced dataset: Imbalanced data (more "no churn" than "churn" cases) can bias the model toward predicting "no churn." Resampling or adjusting thresholds can mitigate this. The dataset size (7,043 entries) generally supports logistic regression, but handling any class imbalance improves performance.
 
 
 
@@ -480,6 +480,8 @@ Insights:
 [2]. https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
 [3]. https://www.kaggle.com/code/yildiramdsa/life-expectancy-eda-key-influencing-factors
+
+[4]. https://www.kaggle.com/code/bandiatindra/telecom-churn-prediction
 
 
 
