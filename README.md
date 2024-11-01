@@ -39,7 +39,7 @@ The data set includes information about:
 + Demographic info about customers – gender, age range, and if they have partners and dependents
 
 
-## Project Objectives
+## III. Project Objectives
 + Estimating the value of a dependent variable for a given set of independent variables.
 + Understanding relationships in determining the strength and nature of the relationships between variables.
 + Developing models by creating mathematical models to represent the relationships between variables.
