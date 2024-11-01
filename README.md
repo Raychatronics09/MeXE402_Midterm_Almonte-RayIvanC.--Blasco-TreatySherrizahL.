@@ -317,6 +317,11 @@ The Mean Squared Error value resulted in 16.96948547597787:
 
 Overall, The model is accurate enough as it is and is able to accurately interpret and correlate the independent and dependent variables but there is some room for improvement. These improvements, in the context of life expectancy, may come in more additional, relevant and cruicial information that regards the Healthcare status, living conditions, and overall structure of the country for accomodating human life.
 
+### Insights
++ Linear Regression analysis is a good model for this dataset. Its scores that are a good reference for how good and accurate the model is are both decent but clearly, for something as critical as Life Expectancy, using several different approaches could possibly be more fitting and not just Linear Regression.
++ Linear Regression's accuracy is too sensitive to outliers which make it a hnidrance for the model. Outliers in this dataset are not mistakes but are solely variance due to the differences of living conditions in each of the countries listed in the dataset.
++ Linear Regression requires too heavily on linear relationships but some datasets have different relationships within them. Maybe by adjusting the dataset to have only a linear relationship format with the data collected, Linear Regression Analysis would become a better fit.
+
 ## Logistic Regression Analysis
 For Logistic Regression Analysis, the dataset used is the "Telco Churn Prediction" which is in a format of **comma-separated values.** With the given data (which are now interpreted as variables), the machine is able to assess and predict the probability of a customer churning (leaving the service) based on the inputs provided. The following section was the overall step-by-step coding process.
 
@@ -436,7 +441,7 @@ Discussion of the continuous variables tenure, monthly charges, and total charge
 + Therefore,  monthly charges, tenure and total charges are the most important predictor variables to predict churn.
 
 
-Insights:
+### Insights
 + Logistic regression was selected for its interpretability and effectiveness in binary classification problems like churn prediction.
 + Feature importance can often reveal which factors contribute most significantly to churn. For instance, longer tenure could significantly impact the probability of churn.
 + In certain features, like monthly charges and total charges, were shown to have a stronger influence on the prediction, the business can explore targeted interventions based on these factors to reduce churn.
