@@ -434,7 +434,8 @@ Insights:
 + Overall, the model’s outputs support data-driven decisions, allowing the business to focus resources on high-risk customers and enhance retention through targeted initiatives.
 
 
-
+## Reference
+[1]. https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 
 
 
