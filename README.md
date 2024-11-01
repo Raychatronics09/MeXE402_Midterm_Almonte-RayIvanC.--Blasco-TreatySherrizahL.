@@ -11,7 +11,7 @@ The following variables are contained in the datasheet:
 + ***Country*** - 193 unique entries
 + ***Year*** - Ranging from 2010 to 2015
 + ***Status*** - Developed or Developing status
-+ ***Population***
++ ***Population*** - Population of each country
 + ***Life expectancy*** - Life Expectancy in age
 + ***Adult Mortality*** - Adult Mortality Rates of both sexes (probability of dying between 15 and 60 years per 1000 population)
 + ***Infant deaths*** - Number of Infant Deaths per 1000 population
@@ -24,7 +24,7 @@ The following variables are contained in the datasheet:
 + ***Polio*** - Polio (Pol3) immunization coverage among 1-year-olds (%)
 + ***Total expenditure*** - General government expenditure on health as a percentage of total government expenditure (%)
 + ***Diphtheria*** - Diphtheria tetanus toxoid and pertussis (DTP3) immunization coverage among 1-year-olds (%)
-+ ***HIV/AIDS*** - Deaths per 1 000 live births HIV/AIDS (0-4 years)
++ ***HIV/AIDS*** - Deaths per 1000 live births HIV/AIDS (0-4 years)
 + ***GDP*** - Gross Domestic Product per capita (in USD)
 + ***Thinness 10-19 years*** - Prevalence of thinness among children and adolescents for Age 10 to 19 (%)
 + ***Thinness 5-9 years*** - Prevalence of thinness among children for Age 5 to 9 (%)
@@ -71,12 +71,12 @@ For **Linear Regression Analysis**, the dataset used is the "Life Expectancy (WH
 + missing_count: This line shows the number of missing values in each column.
 
 **Figure 1.4: Fills in missing values (blank cells) within the dataset's existing columns.**
-![image](https://github.com/user-attachments/assets/0c106e1c-4329-4566-b393-b648e9cf9500)
+![image](https://github.com/user-attachments/assets/958ff9bd-51b9-47fa-8a02-dbb4986c9514)
 
-dataset[''] = dataset[''].fillna(dataset[''].mean()): 
-+ dataset['']: This part selects the column from the dataset.
+dataset[col] = dataset[col].fillna(dataset[col].mean()): 
++ dataset[col]: This part selects the column from the dataset.
 + .fillna(): This method is used to fill in missing values.
-+ dataset[''].mean(): This calculates the mean (average) value of the column, excluding any missing values.
++ dataset[col].mean(): This calculates the mean (average) value of the column, excluding any missing values.
 
 
 **Figure 1.5: Displays the first 5 rows of a Pandas Data Frame named dataset.**
@@ -266,6 +266,15 @@ After conducting the procedures in the Methodology, these findings emerged while
 **Figure 1.37: Calculates the Mean Squared Error**
 ![image](https://github.com/user-attachments/assets/0ee6fd3d-cdf5-4134-8d68-817b1d86fbe2)
 
+**Figure 1.38: Code for Visualization of Y test, Y pred and X test**
+
+![image](https://github.com/user-attachments/assets/c158e02e-b760-4c3f-88a1-38c442575e91)
+
+
+**Figure 1.39: Visualization of Y test vs Y pred from X tests of each accounted independent variable**
+
+![image](https://github.com/user-attachments/assets/0df9b245-fd39-48f0-a35a-1f4c7d1889ce)
+
 ## Discussion
 
 Based on the findings of this Linear Regression Analysis for the datasheet **Life Expectancy (WHO)**, several things need discussion which are the important independent variables that affect the dependent variable the most.
@@ -435,26 +444,25 @@ Insights:
 
 ## Linear vs. Logistic Regression: Key Differences and Limitations
 
-### Linear vs. Logistic Regression
-**Purpose:**
-**Linear Regression:** Predicts a continuous outcome.
+### **Purpose:**
 
-**Logistic Regression:** Predicts a binary outcome (e.g., yes/no).
++ **Linear Regression:** Predicts a continuous outcome.
++ **Logistic Regression:** Predicts a binary outcome (e.g., yes/no).
 
-**Output:**
-**Linear Regression:** Gives a continuous value.
+### **Output:**
 
-**Logistic Regression:** Provides a probability to classify an observation.
++ **Linear Regression:** Gives a continuous value.
++ **Logistic Regression:** Provides a probability to classify an observation.
 
-**Applications:**
-**Linear Regression:** Ideal for forecasting and trends.
+### **Applications:**
 
-**Logistic Regression:** Best for classification tasks, like churn prediction.
++ **Linear Regression:** Ideal for forecasting and trends.
++ **Logistic Regression:** Best for classification tasks, like churn prediction.
 
-**Limitations**
-**Linear Regression:** Sensitive to outliers, assumes a linear relationship, and struggles with multicollinearity.
+## **Limitations**
 
-**Logistic Regression:** Limited to binary (or complex multi-class) outcomes, assumes linearity in log-odds, and needs a larger, balanced dataset.
++ **Linear Regression:** Sensitive to outliers, assumes a linear relationship, and struggles with multicollinearity.
++ **Logistic Regression:** Limited to binary (or complex multi-class) outcomes, assumes linearity in log-odds, and needs a larger, balanced dataset.
 
 
 
@@ -462,6 +470,9 @@ Insights:
 [1]. https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who
 
 [2]. https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+
+[3]. https://www.kaggle.com/code/yildiramdsa/life-expectancy-eda-key-influencing-factors
+
 
 
 
