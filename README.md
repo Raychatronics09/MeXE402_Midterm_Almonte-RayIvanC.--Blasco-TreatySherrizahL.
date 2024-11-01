@@ -433,9 +433,37 @@ Insights:
 + In certain features, like monthly charges and total charges, were shown to have a stronger influence on the prediction, the business can explore targeted interventions based on these factors to reduce churn.
 + Overall, the model’s outputs support data-driven decisions, allowing the business to focus resources on high-risk customers and enhance retention through targeted initiatives.
 
+## Linear vs. Logistic Regression: Key Differences and Limitations
+
+### Linear vs. Logistic Regression
+**Purpose:**
+**Linear Regression:** Predicts a continuous outcome.
+
+**Logistic Regression:** Predicts a binary outcome (e.g., yes/no).
+
+**Output:**
+**Linear Regression:** Gives a continuous value.
+
+**Logistic Regression:** Provides a probability to classify an observation.
+
+**Applications:**
+**Linear Regression:** Ideal for forecasting and trends.
+
+**Logistic Regression:** Best for classification tasks, like churn prediction.
+
+**Limitations**
+**Linear Regression:** Sensitive to outliers, assumes a linear relationship, and struggles with multicollinearity.
+
+**Logistic Regression:** Limited to binary (or complex multi-class) outcomes, assumes linearity in log-odds, and needs a larger, balanced dataset.
+
+
 
 ## Reference
-[1]. https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+[1]. https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who
+
+[2]. https://www.kaggle.com/datasets/blastchar/telco-customer-churn
+
+
 
 
 
